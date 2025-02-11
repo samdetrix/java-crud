@@ -31,8 +31,8 @@ public class UserController {
         }
     }
 
-//    get all created users
-@GetMapping("/all")
+    //    get all created users
+    @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
         try {
             List<User> users = userService.getAllUsers();
@@ -42,6 +42,7 @@ public class UserController {
                     .body(null);
         }
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<?> getUserById(@PathVariable("id") Integer id) {
         try {
@@ -58,5 +59,8 @@ public class UserController {
         }
     }
 
-}
 
+
+
+
+}
